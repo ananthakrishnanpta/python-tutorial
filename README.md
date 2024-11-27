@@ -9,6 +9,7 @@
 6. [Object-Oriented Programming (OOP)](06_OOP.md)
 
 ## About the Author
+### Anantha Krishnan PTA
 Computer Science Engineer and trainer with experience in 
 Python(bots, data wrangling, audio processing, UI design with Qt ), R, Computer Vision and audio, 
 Full Stack Web Development (HTML5, CSS, JS, Django, Spring, SQL, NoSQL) and Java development,
