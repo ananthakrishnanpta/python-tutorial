@@ -1,7 +1,4 @@
-
 # Python Tutorial
-
-Welcome to the **Python Tutorial** repository! This comprehensive guide takes you from the basics to advanced topics in Python, explained with clear definitions, examples, and outputs. Perfect for beginners and those looking to strengthen their Python skills.
 
 ## Table of Contents
 1. [Introduction](01_Introduction.md)
@@ -12,17 +9,14 @@ Welcome to the **Python Tutorial** repository! This comprehensive guide takes yo
 6. [Object-Oriented Programming (OOP)](06_OOP.md)
 
 ## About the Author
-This tutorial was created by [Your Name], a **trainer** and **computer science engineer** passionate about teaching and empowering learners with practical knowledge.
+### Anantha Krishnan PTA
+Computer Science Engineer and trainer with experience in 
+Python(bots, data wrangling, audio processing, UI design with Qt ), R, Computer Vision and audio, 
+Full Stack Web Development (HTML5, CSS, JS, Django, Spring, SQL, NoSQL) and Java development,
+keen on research in computer audio and codecs.
 
-## How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/python-tutorial.git
-   ```
-2. Navigate through the linked files to explore various topics.
+Audio engineer with proven experience in tone synthesis, analog sound shaping, broadcast standard mix-mastering and experience with large format mixing consoles in live environments, looking to expand into computer audio and VST development.
 
 ## Contribution
 Feel free to contribute by opening issues or submitting pull requests. Feedback is always welcome!
 
-## License
-This project is licensed under the MIT License.
