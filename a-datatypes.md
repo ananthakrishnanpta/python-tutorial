@@ -1,5 +1,4 @@
 # Python Data Types and Methods
-
 ---
 
 ## **1. Numeric Types**
