@@ -390,7 +390,99 @@ lst = [1, 2, 3]
     del lst[1]
     print(lst)  # Output: [9, 3]
     ```
+---
+### **2.3 Tuple (`tuple`)**
 
+Tuples are immutable sequences used to store collections of items.
+
+**Declaration**:  
+```python
+t = (1, 2, 3)
+```
+
+#### **Methods**:
+
+1. `count(item)` – Counts the occurrences of an item in the tuple.
+   ```python
+   t = (1, 2, 2, 3)
+   print(t.count(2))  # Output: 2
+   ```
+
+2. `index(item)` – Returns the first index of an item.
+   ```python
+   t = (1, 2, 3)
+   print(t.index(2))  # Output: 1
+   ```
+
+3. `__contains__(item)` – Checks if an item exists in the tuple.
+   ```python
+   t = (1, 2, 3)
+   print(2 in t)  # Output: True
+   ```
+
+4. `__getitem__(index)` – Accesses an element by index.
+   ```python
+   t = (1, 2, 3)
+   print(t[0])  # Output: 1
+   ```
+
+5. `__len__()` – Returns the number of elements in the tuple.
+   ```python
+   t = (1, 2, 3)
+   print(len(t))  # Output: 3
+   ```
+
+6. `__iter__()` – Returns an iterator for the tuple.
+   ```python
+   t = (1, 2, 3)
+   for elem in t:
+       print(elem)  # Output: 1, 2, 3
+   ```
+
+7. `__add__(other)` – Concatenates two tuples.
+   ```python
+   t1 = (1, 2)
+   t2 = (3, 4)
+   print(t1 + t2)  # Output: (1, 2, 3, 4)
+   ```
+
+8. `__mul__(times)` – Repeats the tuple `times` times.
+   ```python
+   t = (1, 2)
+   print(t * 3)  # Output: (1, 2, 1, 2, 1, 2)
+   ```
+
+9. `__getitem__(slice)` – Slices the tuple.
+   ```python
+   t = (1, 2, 3, 4)
+   print(t[1:3])  # Output: (2, 3)
+   ```
+
+10. `__hash__()` – Returns a hash value for the tuple.
+    ```python
+    t = (1, 2, 3)
+    print(hash(t))  # Output: A hash value (e.g., 529344067295497451)
+    ```
+
+11. `__eq__(other)` – Compares two tuples for equality.
+    ```python
+    t1 = (1, 2, 3)
+    t2 = (1, 2, 3)
+    print(t1 == t2)  # Output: True
+    ```
+
+12. `__lt__(other)` – Compares if one tuple is less than another lexicographically.
+    ```python
+    t1 = (1, 2, 3)
+    t2 = (1, 2, 4)
+    print(t1 < t2)  # Output: True
+    ```
+
+13. `__contains__(item)` – Checks if an item is present in the tuple.
+    ```python
+    t = (1, 2, 3)
+    print(2 in t)  # Output: True
+    ```
 ---
 
 ## **3. Set Types**
