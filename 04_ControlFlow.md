@@ -145,22 +145,20 @@ match variable:
 
 #### Example: Simple Matching
 ```python
-def weekday(day):
-    match day:
-        case 1:
-            return "Monday"
-        case 2:
-            return "Tuesday"
-        case 3:
-            return "Wednesday"
-        case _:
-            return "Invalid day"
-
-print(weekday(2))
+value = 2
+match value:
+    case 1:
+        print("One")
+    case 2:
+        print("Two")
+    case 3:
+        print("Three")
+    case _:
+        print("Invalid number")
 ```
 **Output:**
 ```
-Tuesday
+Two
 ```
 
 ---
@@ -170,26 +168,25 @@ You can nest `match` statements to handle complex scenarios.
 
 #### Example: Categorize Vehicle
 ```python
-def vehicle_type(vehicle, wheels):
-    match vehicle:
-        case "car":
-            match wheels:
-                case 4:
-                    return "Standard Car"
-                case _:
-                    return "Unknown Car Type"
-        case "bike":
-            match wheels:
-                case 2:
-                    return "Motorbike"
-                case 3:
-                    return "Trike"
-                case _:
-                    return "Unknown Bike Type"
-        case _:
-            return "Unknown Vehicle"
-
-print(vehicle_type("car", 4))
+vehicle = "car"
+wheels = 4
+match vehicle:
+    case "car":
+        match wheels:
+            case 4:
+                print("Standard Car")
+            case _:
+                print("Unknown Car Type")
+    case "bike":
+        match wheels:
+            case 2:
+                print("Motorbike")
+            case 3:
+                print("Trike")
+            case _:
+                print("Unknown Bike Type")
+    case _:
+        print("Unknown Vehicle")
 ```
 **Output:**
 ```
