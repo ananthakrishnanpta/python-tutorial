@@ -223,6 +223,47 @@ banana
 cherry
 ```
 
+#### Example: Using `range()`
+```python
+for i in range(5):
+    print("Number:", i)
+```
+**Output:**
+```
+Number: 0
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+```
+
+#### Nested `for` Loop Example
+```python
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"({i}, {j})", end=" ")
+    print()
+```
+**Output:**
+```
+(1, 1) (1, 2) (1, 3) 
+(2, 1) (2, 2) (2, 3) 
+(3, 1) (3, 2) (3, 3) 
+```
+
+#### Use Case: Factorial of a Number
+```python
+num = 5
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print(f"Factorial of {num} is {factorial}")
+```
+**Output:**
+```
+Factorial of 5 is 120
+```
+
 ---
 
 ### 2. `while` Loop
@@ -250,28 +291,47 @@ while count > 0:
 1
 ```
 
----
-
-### 3. Nested Loops
-Loops can be nested inside each other.
-
-#### Example: Multiplication Table
+#### Nested `while` Loop Example
 ```python
-for i in range(1, 4):
-    for j in range(1, 4):
-        print(i * j, end=" ")
+row, col = 1, 1
+while row <= 3:
+    while col <= 3:
+        print(f"({row}, {col})", end=" ")
+        col += 1
     print()
+    row += 1
+    col = 1
 ```
 **Output:**
 ```
-1 2 3 
-2 4 6 
-3 6 9 
+(1, 1) (1, 2) (1, 3) 
+(2, 1) (2, 2) (2, 3) 
+(3, 1) (3, 2) (3, 3) 
+```
+
+#### Dangers of Infinite Loops
+An infinite loop occurs when the terminating condition of a `while` loop never becomes false. This can freeze your program.
+
+#### Example: Infinite Loop
+```python
+while True:
+    print("This will run forever!")
+```
+To avoid infinite loops:
+- Ensure the condition will eventually evaluate to `False`.
+- Use break statements if necessary.
+
+#### Example: Controlled Infinite Loop
+```python
+while True:
+    response = input("Type 'exit' to quit: ")
+    if response == "exit":
+        break
 ```
 
 ---
 
-### 4. `break`, `continue`, and `else` in Loops
+### 3. `break`, `continue`, and `else` in Loops
 - **`break`**: Exits the loop prematurely.
 - **`continue`**: Skips the current iteration.
 - **`else`**: Executes if the loop completes without a `break`.
@@ -290,3 +350,32 @@ else:
 ```
 Prime
 ```
+
+---
+
+### Use Case: Multiplication Table with `break`
+```python
+for i in range(1, 6):
+    for j in range(1, 6):
+        if i * j > 10:
+            break
+        print(i * j, end=" ")
+    print()
+```
+**Output:**
+```
+1 2 3 4 5 
+2 4 6 8 10 
+3 6 9 
+4 8 
+5 
+```
+
+---
+
+## Summary
+- Use `for` loops for iterating over sequences.
+- Use `while` loops for repeating actions with conditions.
+- Avoid infinite loops by ensuring a clear termination condition.
+- Combine `break` and `else` for better loop control.
+- Utilize nested loops and `match` for complex scenarios.
