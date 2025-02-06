@@ -278,9 +278,7 @@ text = "hello"
 14. `capitalize()` – Capitalizes the first character of the string.
     ```python
     text = "hello"
-    print(text.capitalize()) 
-
- # Output: "Hello"
+    print(text.capitalize())  # Output: "Hello"
     ```
 
 15. `swapcase()` – Swaps the case of all characters.
