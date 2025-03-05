@@ -1,5 +1,5 @@
 # Pattern Problems
-1. 
+1. Number patterns
 
     1 
     1 2
