@@ -2,8 +2,8 @@
 ## **1. Polymorphism?**
 
 **Polymorphism** is derived from two Greek words: 
-- **Poly**: Many  
-- **Morph**: Forms  
+   - **Poly**: Many  
+   - **Morph**: Forms  
 
 In programming, polymorphism refers to the ability of different objects to respond to the same method name or operator in their own unique way.
 
