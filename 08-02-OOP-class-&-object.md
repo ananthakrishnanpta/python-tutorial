@@ -1,8 +1,9 @@
 ### **Classes and Objects in Python**
 
 #### **1. Basic Concepts**
- **Class**: A blueprint or template for creating objects. It encapsulates data (attributes) and behavior (methods).
- **Object**: A specific instance of a class. Objects are tangible implementations of the class.
+ 
+ - **Class**: A blueprint or template for creating objects. It encapsulates data (attributes) and behavior (methods).
+ - **Object**: A specific instance of a class. Objects are tangible implementations of the class.
 
 ### **2. Class Declaration**
 ```python
