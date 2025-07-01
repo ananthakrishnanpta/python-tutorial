@@ -109,6 +109,26 @@ def fibonacci_iterative(terms):
 terms = 10
 fibonacci_iterative(terms)
 ```
+### 5. Finding all possible permutations of a given string
+
+
+```python
+def find_permutations(string, current_permutation=""):
+    if len(string) == 0:
+        print(current_permutation)  # Base case: print the permutation when no characters are left
+        return
+
+    for i in range(len(string)):
+        # Choose an index
+        chosen_char = string[i]
+
+        # Remaining characters after removing the `i` index character
+        remaining_chars = string[:i] + string[i+1:]
+
+        find_permutations(remaining_chars, current_permutation + chosen_char)
+
+find_permutations('abc')
+```
 
 ## Medium-Level Questions
 
