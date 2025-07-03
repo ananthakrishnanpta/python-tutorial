@@ -111,6 +111,74 @@ Each `.` represents a passed test.
 * `assertRaises()` verifies if the exception is properly raised (for divide by zero).
 
 ---
+---
 
+# `unittest` Assertions Reference with Examples
+
+This section lists the most commonly used assertion methods in Python’s `unittest` framework with simple explanations and examples.
+
+| Assertion                  | Explanation                                  | Example                                            |
+| -------------------------- | -------------------------------------------- | -------------------------------------------------- |
+| `assertEqual(a, b)`        | Passes if `a == b`                           | `self.assertEqual(2 + 2, 4)`                       |
+| `assertNotEqual(a, b)`     | Passes if `a != b`                           | `self.assertNotEqual(5, 3)`                        |
+| `assertTrue(x)`            | Passes if `x` is `True`                      | `self.assertTrue(3 < 5)`                           |
+| `assertFalse(x)`           | Passes if `x` is `False`                     | `self.assertFalse(10 < 5)`                         |
+| `assertIs(a, b)`           | Passes if `a is b` (same object)             | `self.assertIs(obj1, obj1)`                        |
+| `assertIsNot(a, b)`        | Passes if `a is not b`                       | `self.assertIsNot(obj1, obj2)`                     |
+| `assertIsNone(x)`          | Passes if `x is None`                        | `self.assertIsNone(None)`                          |
+| `assertIsNotNone(x)`       | Passes if `x is not None`                    | `self.assertIsNotNone(5)`                          |
+| `assertIn(a, b)`           | Passes if `a in b`                           | `self.assertIn(3, [1, 2, 3])`                      |
+| `assertNotIn(a, b)`        | Passes if `a not in b`                       | `self.assertNotIn('z', 'abc')`                     |
+| `assertGreater(a, b)`      | Passes if `a > b`                            | `self.assertGreater(10, 5)`                        |
+| `assertLess(a, b)`         | Passes if `a < b`                            | `self.assertLess(3, 10)`                           |
+| `assertGreaterEqual(a, b)` | Passes if `a >= b`                           | `self.assertGreaterEqual(5, 5)`                    |
+| `assertLessEqual(a, b)`    | Passes if `a <= b`                           | `self.assertLessEqual(2, 4)`                       |
+| `assertAlmostEqual(a, b)`  | Passes if `a ≈ b` (for floats)               | `self.assertAlmostEqual(0.1 + 0.2, 0.3, places=1)` |
+| `assertRaises(Exception)`  | Passes if code raises the expected exception | `with self.assertRaises(ZeroDivisionError): 1 / 0` |
+
+---
+
+## Notes
+
+* Use `assertEqual` for comparing values.
+* Use `assertRaises` when testing code that should throw exceptions.
+* Use `assertIn`/`assertNotIn` for checking membership (like in lists or strings).
+* Use `assertAlmostEqual` for comparing floating-point values.
+
+---
+
+## Example
+
+```python
+import unittest
+
+class TestExamples(unittest.TestCase):
+
+    def test_assertions(self):
+        self.assertEqual(2 * 2, 4)
+        self.assertNotEqual(2 + 2, 5)
+        self.assertTrue(10 > 1)
+        self.assertFalse(0 > 1)
+        self.assertIs(None, None)
+        self.assertIsNot([], None)
+        self.assertIsNone(None)
+        self.assertIsNotNone("data")
+        self.assertIn("a", "cat")
+        self.assertNotIn("z", "cat")
+        self.assertGreater(9, 3)
+        self.assertLess(3, 9)
+        self.assertGreaterEqual(5, 5)
+        self.assertLessEqual(5, 5)
+        self.assertAlmostEqual(0.1 + 0.2, 0.3, places=1)
+
+    def test_exception(self):
+        with self.assertRaises(ZeroDivisionError):
+            1 / 0
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+---
 
 
