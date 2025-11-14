@@ -89,29 +89,49 @@ Extract digits using `% 10`, build `reversed_number`, then compare to original. 
 
 ---
 
-## 4. Check if a number is Armstrong (narcissistic) for 3 digits
+## 4. Check if a number is Armstrong (narcissistic)
 
-**Problem:** For a 3-digit `number`, check if sum of cubes of digits equals the number (e.g., `153`).
+**Problem:** Check if the given number is armstrong number.
 
 ```python
-def is_armstrong_number(number):
-    original_number = number
-    sum_of_cubes = 0
-    working_number = number
+def is_armstrong_number_any_digits(number):
+    # Work with the absolute value for digit extraction; Armstrong property is for non-negative integers.
+    original_number = abs(number)
+
+    # Special-case: 0 is an Armstrong number (0^1 == 0).
+    if original_number == 0:
+        return True
+
+    # 1) Count digits (do not modify original_number yet)
+    digit_count = 0
+    temp_for_count = original_number
+    while temp_for_count > 0:
+        digit_count = digit_count + 1
+        temp_for_count = temp_for_count // 10
+
+    # 2) Compute sum of each digit raised to the power of digit_count
+    sum_of_powers = 0
+    working_number = original_number
     while working_number > 0:
         digit = working_number % 10
-        sum_of_cubes = sum_of_cubes + (digit ** 3)  # cube of digit
+        sum_of_powers = sum_of_powers + (digit ** digit_count)
         working_number = working_number // 10
-    return sum_of_cubes == original_number
 
-# Example
-print(is_armstrong_number(153))  # True
-print(is_armstrong_number(370))  # True
-print(is_armstrong_number(123))  # False
+    # 3) Compare the computed sum with the original number
+    return sum_of_powers == original_number
+
+# Examples
+print(is_armstrong_number_any_digits(153))    # True  (3 digits: 1^3 + 5^3 + 3^3 = 153)
+print(is_armstrong_number_any_digits(370))    # True  (3 digits)
+print(is_armstrong_number_any_digits(9474))   # True  (4 digits: 9^4 + 4^4 + 7^4 + 4^4 = 9474)
+print(is_armstrong_number_any_digits(1634))   # True  (4 digits)
+print(is_armstrong_number_any_digits(123))    # False
+print(is_armstrong_number_any_digits(0))      # True
+
 ```
 
 **Explanation:**
-Extract each digit, add its cube to `sum_of_cubes`, then compare with original. This is the standard Armstrong check for 3-digit numbers.
+Extract each digit, raise it to the power of total number of digits in the original number, add them up, then compare with original. This is the standard Armstrong check.
 
 ---
 
