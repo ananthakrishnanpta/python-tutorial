@@ -1,7 +1,3 @@
-Nice — I’ll give you a clear, beginner-friendly **Markdown tutorial** with **30 Python problems** and **complete, simple solutions**, each followed by a step-by-step explanation. I’ll use descriptive variable names (no `i`, `a`, `b`) and avoid advanced tricks so the logic is easy to follow.
-
----
-
 # Beginner Python Practice — 30 Problems with Simple Solutions
 
 > Before you start:
